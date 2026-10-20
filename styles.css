@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+main {
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+#main-sidebar {
+  display: flex;
+}
+
+#sidebar {
+  min-height: 90vh;
+  border: 1px solid black;
+  min-width: 25%;
+}
+
+#sidebar nav {
+  border: 1px solid black;
+}
+
+#summary p {
+  text-align: justify;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.menu li {
+}
+
+.menu li a {
+  font-size: 2rem;
+}
