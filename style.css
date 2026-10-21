@@ -15,6 +15,7 @@ html {
 body {
   max-width: 1120px;
   margin: 0 auto;
+  background-color: aliceblue;
 }
 
 main {
@@ -22,8 +23,13 @@ main {
   font-size: 2rem;
 }
 
+header {
+  background-color: white;
+}
+
 #main-sidebar {
   display: flex;
+  background-color: white;
 }
 
 #sidebar {
@@ -47,6 +53,7 @@ main {
 }
 
 .menu li {
+  list-style: none;
 }
 
 .menu li a {

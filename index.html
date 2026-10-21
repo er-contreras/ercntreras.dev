@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>My Website</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 
-  <script defer src="./script.js"></script>
+  <script defer src="scripts/loader.js"></script>
+  <script defer src="scripts/hiddenOnClick.js"></script>
 </head>
 
 <body>
@@ -15,118 +16,20 @@
   </header>
 
   <div id="main-sidebar">
-    <section id="sidebar">
-      <nav>
-        <ul class="menu">
-          <li><a href="#" class="nav-link" data-target="summary">Summary</a></li>
-          <li><a href="#" class="nav-link" data-target="dsl-examples">DSL Examples</a></li>
-          <li><a href="#" class="nav-link" data-target="interface-module-examples">Interface Module Examples</a></li>
-          <li><a href="#" class="nav-link" data-target="middleware">Middleware</a></li>
-          <li><a href="#" class="nav-link" data-target="error-handling">Error Handling</a></li>
-          <li>
-            <a href="#" class="nav-link" data-target="architectural-examples">Architectural Examples</a>
-          </li>
-          <li>
-            <a href="#" class="nav-link" data-target="review-once-in-a-while">Review once in a while</a>
-
-          </li>
-        </ul>
-      </nav>
-    </section>
+    <section id="sidebar"></section>
 
     <main>
-      <section id="summary" class="content-section">
-        <h2>Backend Developer</h2>
-        <p>
-          Highly analytical Backend Engineer with over 2 years of production-level experience designing, scaling, and
-          modernizing Ruby on Rails architectures. Proven track record in high-impact domains including secure fintech
-          payment integrations (Stripe Level 2/3), enterprise API optimization (PostgreSQL/N+1 resolution), and
-          automated DevOps workflows (Docker/CI/CD). Combines a strong foundation in high-level frameworks with deep
-          systems-level curiosity, actively building high-performance tooling in Zig to master manual memory management
-          and low-level optimization. A bilingual (C1 English) engineer optimized for cross-border, high-autonomy remote
-          teams.
-        </p>
-      </section>
-
-      <section id="dsl-examples" class="content-section hidden">
-        <h2>DSL Examples</h2>
-        <ul>
-          <li>SQL</li>
-          <li>REGEX</li>
-          <li>CSS</li>
-          <li>MAKE</li>
-          <li>ANT</li>
-        </ul>
-      </section>
-
-      <section id="interface-module-examples" class="content-section hidden">
-        <h2>Interface Modules Examples</h2>
-        <ul>
-          <li><a href="https://docs.ruby-lang.org/en/master/Enumerable.html">Enumerable in Ruby</a></li>
-          <li>Comparable (The comparison Interface)</li>
-          <li>Diggable</li>
-        </ul>
-      </section>
-
-      <section id="middleware" class="content-section hidden">
-        <h2>Middleware</h2>
-        <ul>
-          <li>(Empty)</li>
-        </ul>
-      </section>
-
-      <section id="error-handling" class="content-section hidden">
-        <h2>Error Handling</h2>
-        <ul>
-          <li>Errno::ENOENT</li>
-        </ul>
-      </section>
-
-      <section id="architectural-examples" class="content-section hidden">
-        <div>
-          <h2>Architectural Examples</h2>
-          <div>
-            <ul>
-              Monolithic with SSR
-              <li>No network overhead - Your frontend doesn't need to make separate fetch() or Axios calls just to load
-                a basic page.</li>
-              <li>No CORS or Session sharing pain - You don't have to worry about cross-origin security rules or setting
-                up complex token-based authentication (like JWT). You can use standard, highly secure HTTP-only cookies
-                and sessions out of the box.</li>
-              <li>Simply tooling - You don't need a heavy JavaScript build system (like Webpack, Vite, or npm packages)
-              </li>
-            </ul>
-
-            <ul>
-              Decoupled
-              <li></li>
-            </ul>
-
-            <ul>
-              Headless
-              <li> If you want to write a product description once and have it automatically update on an iPhone app, an
-                Android app, a desktop website, a digital billboard, and an in-store kiosk, headless is the correct
-                choice.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section id="review-once-in-a-while" class="content-section hidden">
-        <h2>Review Once in a While</h2>
-        <ul>
-          <li><a href="https://www.statista.com/statistics/627312/worldwide-developer-population/">Statista</a></li>
-          <li><a
-              href="https://www.slashdata.co/blog/global-developer-population-trends-2025-how-many-developers-are-there">Slashdata</a>
-          </li>
-          <li><a
-              href="https://www.outsourceaccelerator.com/articles/software-developer-statistics/">Outsourceaccelerator</a>
-          </li>
-        </ul>
-      </section>
+      <section id="summary" class="content-section"></section>
+      <section id="dsl-examples" class="content-section hidden"></section>
+      <section id="interface-module-examples" class="content-section hidden"></section>
+      <section id="middleware" class="content-section hidden"></section>
+      <section id="error-handling" class="content-section hidden"></section>
+      <section id="architectural-examples" class="content-section hidden"></section>
+      <section id="review-once-in-a-while" class="content-section hidden"></section>
     </main>
   </div>
+
+  <footer>All rights reserved</footer>
 </body>
 
 </html>
