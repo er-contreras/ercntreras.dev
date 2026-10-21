@@ -25,6 +25,36 @@ main {
 
 header {
   background-color: white;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+header h1 {
+  padding: 1rem;
+  color: #373737;
+}
+
+section h2 {
+  color: #373737;
+  padding: 2rem 0;
+}
+
+section ul {
+  list-style: none;
+}
+
+section div {
+  width: 90%;
+  text-align: justify;
+}
+
+footer {
+  width: 1120px;
+  height: 100%;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+  border-top: 1px solid #d7d7d7;
 }
 
 #main-sidebar {
@@ -34,12 +64,12 @@ header {
 
 #sidebar {
   min-height: 90vh;
-  border: 1px solid black;
   min-width: 25%;
+  background-color: #496781;
 }
 
 #sidebar nav {
-  border: 1px solid black;
+  height: 100%;
 }
 
 #summary p {
@@ -50,12 +80,23 @@ header {
   display: flex;
   flex-direction: column;
   padding: 1rem;
+  height: 100%;
+  gap: 2rem;
 }
 
 .menu li {
   list-style: none;
+  background-color: #ffffff;
+  border-radius: 6rem;
+  padding: 1rem;
 }
 
 .menu li a {
   font-size: 2rem;
+  color: #373737;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  color: red;
 }
