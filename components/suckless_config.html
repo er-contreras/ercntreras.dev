@@ -1,0 +1,114 @@
+<h2>There is a few considerations that you have to take before</h2>
+<div>
+  <h3>Before we need to install in Debian</h3>
+  <code>
+    sudo apt install libxcomposite-dev libxdamage-dev libxrandr-dev libconfig-dev libdbus-1-dev libglx-dev libgl-dev
+    libdrm-dev libpcre3-dev libxft-dev libxinerama-dev
+  </code>
+
+  <h3>Dependencies when Fedora is use as distro</h3>
+
+  <code>
+    sudo dnf install libXcomposite-devel libXdamage-devel libXrandr-devel libconfig-devel dbus-devel libGL-devel
+    pcre-devel
+  </code>
+
+  <h3>Install</h3><code>sudo apt install xinit</code>
+
+  <h3>CLONE THE NEXT PRINCIPLE TOOLS</h3>
+
+  <code>
+    1. git clone https://git.suckless.org/dwm
+    - patches:
+    - https://dwm.suckless.org/patches/autostart/
+    - https://dwm.suckless.org/patches/splitstatus/dwm-splitstatus-20201114-61bb8b2.diff
+    2. git clone https://git.suckless.org/dmenu
+    - patches:
+    - https://tools.suckless.org/dmenu/patches/center/
+    - https://tools.suckless.org/dmenu/patches/border/
+    - https://tools.suckless.org/dmenu/patches/lines-below-prompt/
+    3. git clone https://git.suckless.org/st
+    -patches
+    - https://st.suckless.org/patches/alpha/
+    - https://st.suckless.org/patches/scrollback/st-scrollback-0.9.2.diff
+    - https://st.suckless.org/patches/scrollback/st-scrollback-mouse-0.9.2.diff
+    - https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20220127-2c5edf2.diff
+
+    4. git clone https://github.com/chjj/compton
+    5. git clone https://git.suckless.org/slstatus
+  </code>
+
+
+  <h3>OPTIONAL - To create sessions with different desktop environment</h3>
+  <code>/usr/share/sessions
+    touch dwm.desktop
+  </code>
+
+  <h3>
+    Add the next in case of using Debian GNOME or another desktop environment
+    [!Important]
+    If using with minimal Debian is not necessary to do this configuration.
+  </h3>
+  <code>
+    [Desktop Entry]
+    Encoding=UTF-8
+    Name=Dwm
+    Comment=Dynamic windowmanager
+    Exec=dwm
+    Icon=dwm
+    Type=XSession
+  </code>
+
+  <h3>The directories as dwm, st and dmenu doesn't have any change until here, you just have to compile and run</h3>
+
+  <code>
+    make
+    sudo make clean install
+  </code>
+
+  <h3>Add autostart.sh</h3>
+
+  <h4>You have to change <code>autostart.sh</code> permissions to exec</h4>
+
+  <code>chmod +x autostart.sh</code>
+
+  <h3>ADD THIS LINE IN .XINITRC TO RUN YOUR SCRIPT</h3>
+  <code>$HOME/.dwm/autostart.sh &</code>
+
+
+  <h3>There are some executable that require to be added to <code>~/.dwm/autostart.sh</code> to make them work
+    if you are not including them in the .xinitrc file.</h3>
+
+  <code>
+    #!/bin/bash
+    xrandr --output eDP-1 --off &
+    exec slstatus &
+    nitrogen --restore &
+    exec compton &
+  </code>
+
+  <h3>The executables like slstatus and compton needs to be symlink so you have to do the next:</h3>
+
+  <code>
+    sudo ln -sf ~/.config/suckless/slstatus/slstatus /usr/local/bin
+  </code>
+
+  <code>
+    sudo ln -sf ~/.config/suckless/compton/compton /usr/local/bin
+  </code>
+
+  <h3>Patching</h3>
+
+  <h4>Example:</h4>
+
+  <code>
+    mkdir patches
+    cd patches
+    curl -O <github-url-of-diff>
+    cd ../
+    patch -p1 < patches/<diff-file>
+    rm -rf config.h
+    make
+    sudo make clean install
+  </code>
+</div>

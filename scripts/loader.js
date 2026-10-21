@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "error-handling", path: "components/error_handling.html" },
     { id: "architectural-examples", path: "components/architectural_examples.html" },
     { id: "review-once-in-a-while", path: "components/review_once_in_a_while.html" },
+    { id: "suckless-config", path: "components/suckless_config.html" },
   ];
 
   components.forEach(comp => loadComponent(comp.id, comp.path));
