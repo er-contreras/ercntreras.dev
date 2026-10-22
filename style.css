@@ -58,6 +58,7 @@ footer {
 #main-sidebar {
   display: flex;
   background-color: white;
+  min-height: 100vh;
 }
 
 #sidebar {
