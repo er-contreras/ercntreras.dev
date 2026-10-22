@@ -63,9 +63,13 @@ footer {
 #sidebar {
   min-width: 25%;
   background-color: #496781;
+  padding-bottom: 6rem;
 }
 
-#sidebar nav {
+#sidebar h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: #c7c7c7;
 }
 
 #summary p {
