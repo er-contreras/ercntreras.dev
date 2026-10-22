@@ -43,7 +43,6 @@ section ul {
 }
 
 section div {
-  width: 90%;
   text-align: justify;
 }
 
@@ -55,6 +54,16 @@ footer {
   border-top: 1px solid #d7d7d7;
 }
 
+pre {
+  background-color: #333333;
+  white-space: pre-wrap;
+}
+
+code {
+  color: #ffffff;
+  font-style: italic;
+}
+
 #main-sidebar {
   display: flex;
   background-color: white;
@@ -64,7 +73,6 @@ footer {
 #sidebar {
   min-width: 25%;
   background-color: #496781;
-  padding-bottom: 6rem;
 }
 
 #sidebar h2 {
