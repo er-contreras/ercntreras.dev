@@ -1,26 +1,37 @@
 <h2>Suckless Installation Steps and Config</h2>
-<h3>There is a few considerations that you have to take before</h3>
-<h3>CLONE THE NEXT PRINCIPLE TOOLS</h3>
+<h3><span style="color: red"> Step 1.</span> CLONE THE FOLLOWING</h3>
+<br>
+<h4>DWM</h4>
 <pre><code>git clone https://git.suckless.org/dwm</code></pre>
 <h4>patches:</h4>
 <p>https://dwm.suckless.org/patches/autostart/</p>
 <p>https://dwm.suckless.org/patches/splitstatus/dwm-splitstatus-20201114-61bb8b2.diff</p>
+<br>
+<h4>DMENU</h4>
 <pre><code>git clone https://git.suckless.org/dmenu</code></pre>
 <h4>patches:</h4>
 <p>https://tools.suckless.org/dmenu/patches/center/</p>
 <p>https://tools.suckless.org/dmenu/patches/border/</p>
 <p>https://tools.suckless.org/dmenu/patches/lines-below-prompt/</p>
+<br>
+<h4>ST</h4>
 <pre><code>git clone https://git.suckless.org/st</code></pre>
 <h4>patches:</h4>
 <p>https://st.suckless.org/patches/alpha/</p>
 <p>https://st.suckless.org/patches/scrollback/st-scrollback-0.9.2.diff</p>
 <p>https://st.suckless.org/patches/scrollback/st-scrollback-mouse-0.9.2.diff</p>
 <p>https://st.suckless.org/patches/scrollback/st-scrollback-mouse-altscreen-20220127-2c5edf2.diff</p>
+<br>
 
-<code>git clone https://github.com/chjj/compton</code></pre>
+<h4>COMPTON</h4>
+<pre><code>git clone https://github.com/chjj/compton</code></pre>
+<br>
+<h4>SLSTATUS</h4>
 <pre><code>git clone https://git.suckless.org/slstatus</code></pre>
 
-<h3>Before we need to install in Debian</h3>
+<br>
+<h3><span style="color: red">Step 2.</span> Before we need to install one of the following oprions</h3>
+<h4>Before we need to install in Debian</h4>
 <pre>
   <code>
     sudo apt install libxcomposite-dev libxdamage-dev libxrandr-dev \
@@ -29,27 +40,31 @@
   </code>
 </pre>
 
-<h3>Dependencies when Fedora is use as distro</h3>
-
+<br>
+<h4>Dependencies when Fedora is used as distro</h4>
 <pre>
   <code>
-    sudo dnf install libXcomposite-devel libXdamage-devel libXrandr-devel libconfig-devel dbus-devel libGL-devel
+    sudo dnf install libXcomposite-devel libXdamage-devel \
+    libXrandr-devel libconfig-devel dbus-devel libGL-devel \
     pcre-devel
   </code>
 </pre>
 
-<h3>Install</h3>
+<br>
+<h3><span style="color: red">Step 3.</span> Install</h3>
 <pre><code>sudo apt install xinit</code></pre>
 
+<br>
 <h3>OPTIONAL - To create sessions with different desktop environment</h3>
 <pre><code>cd /usr/share/sessions</code></pre>
 <pre><code>touch dwm.desktop</code></pre>
 
-<h3>
+<br>
+<h4>
   Add the next in case of using Debian GNOME or another desktop environment
   [!Important]
   If using with minimal Debian is not necessary to do this configuration.
-</h3>
+</h4>
 <pre>
   <code>
     [Desktop Entry]
@@ -62,21 +77,26 @@
   </code>
 </pre>
 
-<h3>The directories as dwm, st and dmenu doesn't have any change until here, you just have to compile and run</h3>
+<br>
+<h3><span style="color: red">Step 4.</span> The directories as dwm, st and dmenu doesn't have any change until here, you just have to compile and run
+</h3>
 <pre><code>make</code></pre>
 <pre><code>sudo make clean install</code></pre>
 
-<h3>Add autostart.sh</h3>
-<h3>You have to change autostart.sh permissions to exec</h4>
+<br>
+<h4>Add autostart.sh</h4>
+<p>You have to change autostart.sh permissions to exec</p>
 <pre><code>chmod +x autostart.sh</code></pre>
 
-<h3>ADD THIS LINE IN .XINITRC TO RUN YOUR SCRIPT</h3>
+<br>
+<h4>ADD THIS LINE IN .XINITRC TO RUN YOUR SCRIPT</h4>
 <pre><code>$HOME/.dwm/autostart.sh &</code></pre>
 
-
-<h3>There are some executable that require to be added to ~/.dwm/autostart.sh to make them work
-  if you are not including them in the .xinitrc file.</h3>
-
+<br>
+<h4>
+  There are some executable that require to be added to ~/.dwm/autostart.sh to make them work
+  if you are not including them in the .xinitrc file.
+</h4>
 <pre>
   <code>
     #!/bin/bash
@@ -87,16 +107,20 @@
   </code>
 </pre>
 
-<h3>The executables like slstatus and compton needs to be symlink so you have to do the next:</h3>
+<br>
+<h3><span style="color: red">Step 5.</span> The executables like slstatus and compton needs to be symlink so you have to do the next:</h3>
 <pre><code>sudo ln -sf ~/.config/suckless/slstatus/slstatus /usr/local/bin</code></pre>
 <pre><code>sudo ln -sf ~/.config/suckless/compton/compton /usr/local/bin</code></pre>
 
-<h3>Patching Example:</h3>
+<br>
+<h4>Patching Example:</h4>
 <pre><code>mkdir patches</code></pre>
 <pre><code>cd patches</code></pre>
-<pre><code>curl -O <github0utl-of-diff></code></pre>
+<br>
+<h5>Select one of the patches from DWM, DMW or ST</h5>
+<pre><code>curl -O &lt;githuburl-of-diff&gt;</code></pre>
 <pre><code>cd ../</code></pre>
-<pre><code>patch -p1 <patches /<diff-file></code></pre>
+<pre><code>patch -p1 &lt;patches &lt;diff-file&gt;</code></pre>
 <pre><code>rm -rf config.h</code></pre>
 <pre><code>make</code></pre>
 <pre><code>sudo make clean install</code></pre>
