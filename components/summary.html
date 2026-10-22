@@ -1,16 +1,213 @@
-<h2>Backend Developer</h2>
-<div>
-  <p>
-    Highly analytical Backend Engineer with over 2 years of production-level experience designing, scaling, and
-    modernizing Ruby on Rails architectures. Proven track record in high-impact domains including secure fintech
-    payment integrations (Stripe Level 2/3), enterprise API optimization (PostgreSQL/N+1 resolution), and
-    automated DevOps workflows (Docker/CI/CD). Combines a strong foundation in high-level frameworks with deep
-    systems-level curiosity, actively building high-performance tooling in Zig to master manual memory management
-    and low-level optimization. A bilingual (C1 English) engineer optimized for cross-border, high-autonomy remote
-    teams.
+<style>
+  .resume {
+    font-family: inherit;
+    line-height: 1.3;
+    max-width: 680px;
+  }
+
+  .resume .role {
+    color: #C97C4B;
+    font-size: 1.05em;
+    margin-top: 2px;
+  }
+
+  .resume .meta {
+    opacity: 0.7;
+    font-size: 0.85em;
+    margin-top: 8px;
+  }
+
+  .resume .meta a {
+    color: inherit;
+  }
+
+  .resume .download {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 9px 16px;
+    background: #C97C4B;
+    color: #12181C;
+    font-weight: 600;
+    font-size: 0.85em;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+
+  .resume h3 {
+    font-size: 0.8em;
+    letter-spacing: 0.04em;
+    opacity: 0.6;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 6px;
+    margin: 28px 0 12px;
+  }
+
+  .resume .skill-row {
+    font-size: 0.92em;
+    margin-bottom: 6px;
+  }
+
+  .resume .skill-row span {
+    opacity: 0.7;
+  }
+
+  .resume .job {
+    margin-bottom: 20px;
+  }
+
+  .resume .job-head {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .resume .job-title {
+    font-weight: 600;
+  }
+
+  .resume .job-date {
+    opacity: 0.6;
+    font-size: 0.85em;
+  }
+
+  .resume .job-org {
+    color: #C97C4B;
+    font-size: 0.9em;
+    margin-top: 2px;
+  }
+
+  .resume .job-loc {
+    opacity: 0.6;
+    font-size: 0.85em;
+  }
+
+  .resume ul.bullets {
+    margin: 8px 0 0 18px;
+  }
+
+  .resume ul.bullets li {
+    font-size: 0.92em;
+    margin-bottom: 6px;
+    list-style: disc;
+  }
+
+  .resume ul.bullets li::marker {
+    color: #C97C4B;
+  }
+
+  .resume .links a {
+    color: #C97C4B;
+    text-decoration: none;
+  }
+</style>
+
+<div class="resume">
+
+  <div class="role">Ruby on Rails Backend Developer</div>
+  <div class="meta">Based in Mexico &middot; Open to Remote &middot; er.contreras@hotmail.com &middot;
+    <a href="https://github.com/er-contreras">GitHub</a> &middot;
+    <a href="https://linkedin.com/in/er-contreras">LinkedIn</a>
+  </div>
+  <a class="download" href="./Christian_Contreras_Resume.pdf" download="Christian_Contreras_Resume.pdf">Download PDF</a>
+
+  <h3>summary</h3>
+  <p>Backend developer with over 2 years of professional experience building and maintaining production Ruby on Rails
+    systems including a government-facing REST API (JWT/OIDC-based SSO, PostgreSQL schema design and query optimization)
+    and Stripe payments integrations (checkout flows, Level 2/3 compliance data, React/TypeScript modifications). I've
+    also spent a year as a paid reviewer, evaluating pull requests across Rails, React, and SQL projects, and I'm
+    currently applying that same rigor to independently modernizing and deploying a legacy Rails application end-to-end.
   </p>
-  <button>
-    <a href="../Christian_Contreras_Resume.pdf" download="Christian_Contreras_Resume.pdf" class="download-btn">
-      Download Curriculum
-  </button>
+
+  <h3>skills</h3>
+  <div class="skill-row"><b>Backend</b> <span>&mdash; Ruby on Rails, PostgreSQL, REST APIs, Devise, JWT, CanCanCan,
+      Panko</span></div>
+  <div class="skill-row"><b>Frontend</b> <span>&mdash; JavaScript (ES6+), React, Hotwire (Turbo/Stimulus), HTML5,
+      CSS3/SCSS</span></div>
+  <div class="skill-row"><b>Testing &amp; Quality</b> <span>&mdash; RSpec, FactoryBot, RuboCop, CI/CD (GitHub
+      Actions)</span></div>
+  <div class="skill-row"><b>Infra &amp; Integrations</b> <span>&mdash; Docker, AWS S3, Stripe API, Google OAuth
+      (OIDC)</span></div>
+
+  <h3>professional experience</h3>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Software Engineer</div>
+      <div class="job-date">Oct 2023 &ndash; Mar 2024</div>
+    </div>
+    <div class="job-org">Civica Digital</div>
+    <div class="job-loc">SaaS Startup &middot; Remote, Mexico</div>
+    <ul class="bullets">
+      <li>Built core features of a Rails API (CRUD, authentication, JSON serialization, PDF generation), including
+        PostgreSQL schema design and query optimization to resolve N+1 issues, for a government department in Monterrey,
+        Nuevo Le&oacute;n.</li>
+      <li>Set up an initial Docker configuration to containerize the API for local development.</li>
+      <li>Built REST API endpoints to automate the PDF document lifecycle, replacing a manual process for government
+        clients; documented the API in Swagger.</li>
+      <li>Implemented SSO with Google OAuth, OIDC, and JWT-based authentication, replacing manual login handling for
+        department staff.</li>
+      <li>Led RSpec test coverage for new features, establishing testing conventions used across the codebase.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Ruby Developer</div>
+      <div class="job-date">May 2022 &ndash; Jun 2023</div>
+    </div>
+    <div class="job-org">Apex Systems</div>
+    <div class="job-loc">E-Commerce Platform &middot; Remote, Mexico</div>
+    <ul class="bullets">
+      <li>As part of the payment integration team, contributed to the e-commerce checkout page (debit/credit payments
+        via Stripe for Visa and Mastercard) and picked up cross-team backlog tickets to keep sprint priorities on track.
+      </li>
+      <li>Expanded RSpec coverage across payment endpoints, contributing to more stable deployments and fewer checkout
+        bugs.</li>
+      <li>Implemented Stripe Level 2/3 enhanced transaction data by working through Stripe's integration documentation;
+        modified the existing React/TypeScript checkout flow to add Stripe Link validations.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">Technical Mentor &amp; Code Reviewer</div>
+      <div class="job-date">Sep 2021 &ndash; May 2022</div>
+    </div>
+    <div class="job-org">Microverse</div>
+    <div class="job-loc">Remote</div>
+    <ul class="bullets">
+      <li>Paid per approved review to evaluate pull requests from students in Rails, JavaScript, and React, enforcing
+        clean code standards and best practices.</li>
+    </ul>
+  </div>
+
+  <h3>independent work</h3>
+  <div class="job">
+    <div class="job-head">
+      <div class="job-title">E-Commerce Platform &mdash; Legacy Modernization</div>
+      <div class="job-date">Feb 2026 &ndash; Present</div>
+    </div>
+    <div class="job-org links">Self-directed &middot; <a
+        href="https://github.com/er-contreras/e-commerce_app">Source</a> &middot; <a
+        href="https://e-commerce-app-tydw.onrender.com/">Live demo</a></div>
+    <ul class="bullets">
+      <li>Originally built in 2022; resumed active development to modernize the codebase: upgraded Ruby (3.1.3 to
+        3.3.12) and Rails, containerized with Docker and Docker Compose. Continuing toward Rails 8 / Ruby 4.</li>
+      <li>Independently provisioned and deployed to a managed production environment: configured Rails credentials and
+        environment variables, and connected a managed PostgreSQL database service to the web service.</li>
+      <li>MVC platform with a normalized schema for authors, publishers, and books, and Minitest coverage across cart
+        and checkout logic.</li>
+    </ul>
+  </div>
+
+  <h3>education</h3>
+  <div class="skill-row"><b>B.S. Electrical &amp; Electronic Engineering</b>, <span>UAEM &mdash; Jan 2017 to Jan
+      2020</span></div>
+  <div class="skill-row"><b>Full-Stack Web Development Program</b>, <span>Microverse &mdash; May 2021 to Jan 2022</span>
+  </div>
+
+  <h3>languages</h3>
+  <p>English (C1, EF SET 66/100), Spanish (Native)</p>
+
 </div>
