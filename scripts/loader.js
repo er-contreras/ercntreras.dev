@@ -16,9 +16,13 @@ async function loadComponent(placeholderId, filePath) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const components = [
-    { id: "sidebar", path: "components/sidebar.html" },
+document.addEventListener("DOMContentLoaded", async () => {
+  await Promise.all([
+    loadComponent("main", "components/sections.html"),
+    loadComponent("sidebar", "components/sidebar.html"),
+  ]);
+
+  const innerSections = [
     { id: "summary", path: "components/summary.html" },
     { id: "dsl-examples", path: "components/dsl_examples.html" },
     { id: "interface-module-examples", path: "components/interface_module_examples.html" },
@@ -29,6 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { id: "suckless-config", path: "components/suckless_config.html" },
   ];
 
-  components.forEach(comp => loadComponent(comp.id, comp.path));
+  await Promise.all(innerSections.map(comp => loadComponent(comp.id, comp.path)));
 });
 
