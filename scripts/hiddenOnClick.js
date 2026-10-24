@@ -1,4 +1,3 @@
-const sections = document.querySelectorAll('.content-section');
 
 document.addEventListener('click', (event) => {
   const link = event.target.closest('.nav-link');
@@ -6,6 +5,7 @@ document.addEventListener('click', (event) => {
   if (link) {
     event.preventDefault();
 
+    const sections = document.querySelectorAll('.content-section');
     sections.forEach(section => {
       section.classList.add('hidden');
     });
